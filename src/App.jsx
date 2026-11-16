@@ -450,9 +450,12 @@ export default function App() {
       {/* Header */}
       <header className="bg-[#A41623] text-white shadow">
         <div className="mx-auto max-w-6xl px-4 py-4 flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <h1 className="font-display text-2xl sm:text-3xl font-semibold leading-none">🐾 Merry Paws</h1>
-            <p className="text-red-100 text-sm mt-1">Pet holiday cards for every occasion</p>
+          <div className="flex items-center gap-2">
+            <img src="/logo.png" alt="Merry Paws logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover shadow" />
+            <div>
+              <h1 className="font-display text-2xl sm:text-3xl font-semibold leading-none">Merry Paws</h1>
+              <p className="text-red-100 text-sm mt-1">Pet holiday cards for every occasion</p>
+            </div>
           </div>
           <div className="flex items-center gap-3">
             {daysLeft !== null ? (
