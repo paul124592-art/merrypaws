@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #FFF8F0;
+}
+
+@keyframes snowfall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  100% { transform: translateY(110vh) rotate(340deg); opacity: 0.3; }
+}
+
+.snowflake {
+  position: absolute;
+  top: -8%;
+  animation: snowfall linear infinite;
+  pointer-events: none;
+  user-select: none;
+}
+
+input[type="range"] {
+  accent-color: #A41623;
+}
