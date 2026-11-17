@@ -448,20 +448,21 @@ export default function App() {
   return (
     <div className="min-h-screen font-body text-stone-800">
       {/* Header */}
-      <header className="bg-[#A41623] text-white shadow">
+      <header className="shadow">
+        <div className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-4 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Merry Paws logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover shadow" />
+            <img src="/logo-mark.png" alt="Merry Paws logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover shadow" />
             <div>
-              <h1 className="font-display text-2xl sm:text-3xl font-semibold leading-none">Merry Paws</h1>
-              <p className="text-red-100 text-sm mt-1">Pet holiday cards for every occasion</p>
+              <img src="/logo-wordmark.png" alt="Merry Paws" className="h-9 sm:h-11 w-auto" />
+              <p className="text-[#2C4A3E] text-sm mt-1">Pet holiday cards for every occasion</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
             {daysLeft !== null ? (
-              <span className="bg-white/15 rounded-full px-3 py-1 text-sm font-semibold">{holiday.emoji} {daysLeft} days until {holiday.name}</span>
+              <span className="bg-[#A41623] text-white rounded-full px-3 py-1 text-sm font-semibold">{holiday.emoji} {daysLeft} days until {holiday.name}</span>
             ) : (
-              <span className="bg-white/15 rounded-full px-3 py-1 text-sm font-semibold">{holiday.emoji} Birthdays & gotcha days, all year</span>
+              <span className="bg-[#A41623] text-white rounded-full px-3 py-1 text-sm font-semibold">{holiday.emoji} Birthdays & gotcha days, all year</span>
             )}
             {premium ? (
               <span className="bg-amber-400 text-amber-950 rounded-full px-3 py-1 text-sm font-bold">★ Premium</span>
@@ -472,8 +473,10 @@ export default function App() {
             )}
           </div>
         </div>
+        </div>
         {/* Holiday picker */}
-        <div className="mx-auto max-w-6xl px-4 pb-4 flex flex-wrap gap-2">
+        <div className="bg-[#A41623]">
+        <div className="mx-auto max-w-6xl px-4 py-4 flex flex-wrap gap-2">
           {Object.entries(HOLIDAYS).map(([key, h]) => (
             <button
               key={key}
@@ -483,6 +486,7 @@ export default function App() {
               {h.emoji} {h.name}
             </button>
           ))}
+        </div>
         </div>
       </header>
 
